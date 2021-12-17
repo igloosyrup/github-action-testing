@@ -38,11 +38,13 @@ jobs:
         run: mvn -B package --file Githubactiontests/pom.xml
       
       - name: Step 4 - List the current directory
-        run: ls -a
+        run: |
+          Githubactiontests/
+          ls -a
       
       - name: Step 5 - What is in the target folder?
         run: | 
-          cd target
+          cd Githubactiontests/target
           ls -a
         
 #   test:
